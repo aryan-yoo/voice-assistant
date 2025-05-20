@@ -67,7 +67,7 @@ def processcommand(c):
             body = get_audio()
             print(body)
             speak("What is the recipient's email")
-            recipient = get_audio().replace(" ","")
+            recipient = input('enter the email of recipient: ')
             email_text = f"From: {username}\nTo: {recipient}\nSubject: {subject}\n\n{body}"
             server.sendmail(username,recipient,email_text)
             server.quit()
